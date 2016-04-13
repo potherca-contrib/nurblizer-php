@@ -20,6 +20,6 @@ if (array_key_exists('text', $_POST)) {
     ];
 }
 
-echo mustache(file_get_contents(__DIR__ . '/template.html'), $context);
+echo mustache(file_get_contents(__DIR__ . '/template.html.mustache'), $context);
 
 /*EOF*/
