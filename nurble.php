@@ -23,12 +23,4 @@ function nurble($text)
     return str_replace("\n", '<br>', $text);
 }
 
-include '_header.php'; ?>
-
-<h1>Your Nurbled Text</h1>
-<div><?php echo nurble($_POST['text']); ?></div>
-<p>
-    <a href="/">&lt;&lt; Back</a>
-</p>
-
-<?php include '_footer.php';
+/*EOF*/
