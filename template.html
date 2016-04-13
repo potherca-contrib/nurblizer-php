@@ -17,7 +17,26 @@
 
 <div class="container">
     <h1>{{ title }}</h1>
-    <div>{{ content }}</div>
+
+    {{#content}}
+    <div>{{{ content }}}</div>
+    {{/content}}
+    {{^content}}
+    <form action="" method="post">
+        <fieldset>
+            <ul>
+                <li>
+                    <label>Text to nurblize</label>
+                    <textarea name="text"></textarea>
+                </li>
+                <li>
+                    <input type="submit" value="Nurblize Away!">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+    {{/content}}
+
     <p>
         <a href="{{ footer.link }}">{{ footer.title }}</a>
     </p>

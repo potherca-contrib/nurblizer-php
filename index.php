@@ -9,27 +9,12 @@ if (array_key_exists('text', $_POST)) {
         'title' => 'Your Nurbled Text',
         'content' => nurble($_POST['text']),
         'footer.link' => '',
-        'footer.title' => '&lt;&lt; Back',
+        'footer.title' => '<< Back',
     ];
 } else {
     $context = [
         'title' => 'Nurblizer',
-        'content' => <<<HTML
-        <form action="" method="post">
-            <fieldset>
-                <ul>
-                    <li>
-                        <label>Text to nurblize</label>
-                        <textarea name="text"></textarea>
-                    </li>
-                    <li>
-                        <input type="submit" value="Nurblize Away!">
-                    </li>
-                </ul>
-            </fieldset>
-        </form>
-HTML
-        ,
+        'content' => false,
         'footer.link' => 'http://www.smbc-comics.com/?id=2779',
         'footer.title' => 'wtf?',
     ];
